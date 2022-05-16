@@ -1,6 +1,6 @@
 #include "shell.h"
 
-int _strlen(char *str);
+int _strlen(const char *s);
 char *_strcpy(char *dest, const char *src);
 char *_strcat(char *dest, const char *src);
 char *_strncat(char *dest, const char *src, size_t n);
@@ -11,21 +11,17 @@ char *_strncat(char *dest, const char *src, size_t n);
  *
  * Return: The length of the character string.
  */
-int _strlen(char *str)
+int _strlen(const char *s)
 {
-	int i = 0;
+	int length = 0;
 
-	if (str == NULL)
-		return (0);
-
-	while (*str != '\0')
-	{
-		i++;
-		str++;
-	}
-
-	return (i);
+	if (!s)
+		return (length);
+	for (length = 0; s[length]; length++)
+		;
+	return (length);
 }
+
 /**
  * _strcpy - Copies the string pointed to by src, including the
  *           terminating null byte, to the buffer pointed by des.
