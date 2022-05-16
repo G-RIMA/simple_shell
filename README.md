@@ -8,7 +8,8 @@ Usage: shellby [filename]
 
 To invoke shellby, compile all .c files in the repository and run the resulting executable:
 
-gcc *.c -o shellby
+gcc *.c -o shellby or use gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+
 ./shellby
 Shellby can be invoked both interactively and non-interactively. If shellby is invoked with standard input not connected to a terminal, it reads and executes received commands in order.
 
