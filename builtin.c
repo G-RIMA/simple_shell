@@ -102,7 +102,7 @@ int shellby_cd(char **args, char __attribute__((__unused__)) **front)
 		if (*(args[0]) == '-' || _strcmp(args[0], "--") == 0)
 		{
 			if ((args[0][1] == '-' && args[0][2] == '\0') ||
-			    		args[0][1] == '\0')
+args[0][1] == '\0')
 			{
 				if (_getenv("OLDPWD") != NULL)
 					(chdir(*_getenv("OLDPWD") + 7));
@@ -191,6 +191,3 @@ int shellby_help(char **args, char __attribute__((__unused__)) **front)
 	return (0);
 }
 
-
-
-	

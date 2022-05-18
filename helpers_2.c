@@ -54,17 +54,17 @@ void handle_line(char **line, ssize_t read)
 				if (next != ' ')
 					new_line[j++] = ' ';
 				continue;
- 			}
-			else if (current == '&')
+}
+else if (current == '&')
 			{
-				if (next == '&' && previous != ' ')
-					new_line[j++] = ' ';
-				else if (previous == '&' && next != ' ')
- 				{
-					new_line[j++] = '&';
-					new_line[j++] = ' ';
-					continue;
-				}
+if (next == '&' && previous != ' ')
+	new_line[j++] = ' ';
+else if (previous == '&' && next != ' ')
+{
+	new_line[j++] = '&';
+	new_line[j++] = ' ';
+	continue;
+}
 			}
 			else if (current == '|')
 			{

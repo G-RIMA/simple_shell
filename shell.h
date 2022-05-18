@@ -3,8 +3,7 @@
 
 /*
  * File: shell.h
- * Auth: Assunta Maria
- * 
+ * Auth: Assunta Maria and Augusta Njogo
  */
 
 #include <fcntl.h>

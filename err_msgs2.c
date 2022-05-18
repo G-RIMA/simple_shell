@@ -30,7 +30,7 @@ char *error_126(char **args)
 	_strcat(error, ": ");
 	_strcat(error, hist_str);
 	_strcat(error, ": ");
- 	_strcat(error, args[0]);
+_strcat(error, args[0]);
 	_strcat(error, ": Permission denied\n");
 
 	free(hist_str);
